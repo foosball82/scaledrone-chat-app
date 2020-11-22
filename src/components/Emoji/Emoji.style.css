@@ -1,0 +1,189 @@
+.emoji-tab {
+  width: calc(100% + 10px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  height: 32px;
+  margin-left: -10px;
+  margin-bottom: 5px;
+  padding: 8px 0px;
+  background: rgb(50, 50, 50);
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(rgba(50, 50, 50, 1)),
+    color-stop(20%, rgba(42, 42, 42, 1)),
+    color-stop(43%, rgba(34, 34, 34, 1)),
+    color-stop(54%, rgba(34, 34, 34, 1)),
+    color-stop(77%, rgba(42, 42, 42, 1)),
+    to(rgba(50, 50, 50, 1))
+  );
+  background: -o-linear-gradient(
+    top,
+    rgba(50, 50, 50, 1) 0%,
+    rgba(42, 42, 42, 1) 20%,
+    rgba(34, 34, 34, 1) 43%,
+    rgba(34, 34, 34, 1) 54%,
+    rgba(42, 42, 42, 1) 77%,
+    rgba(50, 50, 50, 1) 100%
+  );
+  background: linear-gradient(
+    180deg,
+    rgba(50, 50, 50, 1) 0%,
+    rgba(42, 42, 42, 1) 20%,
+    rgba(34, 34, 34, 1) 43%,
+    rgba(34, 34, 34, 1) 54%,
+    rgba(42, 42, 42, 1) 77%,
+    rgba(50, 50, 50, 1) 100%
+  );
+}
+
+.emoji-tab__span {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.emoji-tab__span--selected {
+  -webkit-filter: none;
+  filter: none;
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+.emoji-tab__span:hover {
+  -webkit-filter: none;
+  filter: none;
+}
+
+/* watch */
+.emoji-tab__span:nth-of-type(1) {
+  -webkit-box-ordinal-group: 10;
+  -ms-flex-order: 9;
+  order: 9;
+}
+
+/* sparkles */
+.emoji-tab__span:nth-of-type(2) {
+  -webkit-box-ordinal-group: 11;
+  -ms-flex-order: 10;
+  order: 10;
+}
+
+/* sandwich */
+.emoji-tab__span:nth-of-type(3) {
+  -webkit-box-ordinal-group: 6;
+  -ms-flex-order: 5;
+  order: 5;
+}
+
+/* music notes */
+.emoji-tab__span:nth-of-type(4) {
+  -webkit-box-ordinal-group: 7;
+  -ms-flex-order: 6;
+  order: 6;
+}
+
+/* snail */
+.emoji-tab__span:nth-of-type(5) {
+  -webkit-box-ordinal-group: 5;
+  -ms-flex-order: 4;
+  order: 4;
+}
+
+/* thumb */
+.emoji-tab__span:nth-of-type(6) {
+  -webkit-box-ordinal-group: 4;
+  -ms-flex-order: 3;
+  order: 3;
+}
+
+/* heart */
+.emoji-tab__span:nth-of-type(7) {
+  -webkit-box-ordinal-group: 3;
+  -ms-flex-order: 2;
+  order: 2;
+}
+
+/* smiley */
+.emoji-tab__span:nth-of-type(8) {
+  -webkit-box-ordinal-group: 2;
+  -ms-flex-order: 1;
+  order: 1;
+}
+
+/* rocket */
+.emoji-tab__span:nth-of-type(9) {
+  -webkit-box-ordinal-group: 8;
+  -ms-flex-order: 7;
+  order: 7;
+}
+
+/* medal */
+.emoji-tab__span:nth-of-type(10) {
+  -webkit-box-ordinal-group: 9;
+  -ms-flex-order: 8;
+  order: 8;
+}
+
+.emoji-list {
+  list-style-type: none;
+  height: 200px;
+  padding-left: 10px;
+  overflow: scroll;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+  background-color: rgb(44, 44, 44);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.emoji-list--show {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emoji-list--hide {
+  display: none;
+}
+
+.emoji-list__item {
+  cursor: pointer;
+  margin: 5px;
+  font-size: 24px;
+}
+
+.emoji-list__item:active {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.emoji-list {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(150, 150, 150) rgb(44, 44, 44);
+}
+
+/* Works on Chrome/Edge/Safari */
+.emoji-list::-webkit-scrollbar {
+  width: 10px;
+  height: 0px;
+}
+.emoji-list::-webkit-scrollbar-track {
+  background: rgb(44, 44, 44);
+}
+.emoji-list::-webkit-scrollbar-thumb {
+  background-color: rgb(150, 150, 150);
+  border-radius: 20px;
+  border: 3px solid rgb(44, 44, 44);
+}

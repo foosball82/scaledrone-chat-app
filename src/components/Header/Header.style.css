@@ -1,0 +1,52 @@
+.chat__header {
+  background: rgb(23, 24, 43);
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(rgba(23, 24, 43, 1)),
+    to(rgba(48, 56, 152, 1))
+  );
+  background: -o-linear-gradient(
+    left,
+    rgba(23, 24, 43, 1) 0%,
+    rgba(48, 56, 152, 1) 100%
+  );
+  background: linear-gradient(
+    90deg,
+    rgba(23, 24, 43, 1) 0%,
+    rgba(48, 56, 152, 1) 100%
+  );
+  width: 100%;
+  text-align: center;
+  color: rgb(216, 216, 216);
+  height: 56px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  overflow: hidden;
+  padding-top: 15px;
+}
+
+.header__heading {
+  font-size: 16px;
+}
+
+.header__room {
+  /* display: block; */
+  margin-top: 5px;
+  text-transform: capitalize;
+  /* font-size: 14px; */
+}
+
+.header__typing {
+  font-size: 10px;
+}

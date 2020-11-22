@@ -1,0 +1,50 @@
+.chat__input {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.msg-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.msg-form__input {
+  padding: 15px 0px;
+  font-size: 16px;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  color: rgb(43, 43, 43);
+  background-color: rgb(245, 245, 245);
+  border: none;
+  -webkit-user-select: auto;
+  -moz-user-select: auto;
+  -ms-user-select: auto;
+  user-select: auto;
+}
+
+.msg-form__input::-moz-selection {
+  background-color: lightgray;
+}
+
+.msg-form__input::selection {
+  background-color: lightgray;
+}
+
+.msg-form__emoji-btn {
+  background-color: rgb(245, 245, 245);
+  border: none;
+  padding: 0px 15px;
+  font-size: 20px;
+}
+
+.msg-form__btn {
+  padding: 5px;
+  font-size: 16px;
+  border: none;
+  padding: 0 15px 0 20px;
+}

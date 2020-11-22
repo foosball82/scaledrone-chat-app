@@ -1,0 +1,125 @@
+.reg-form__avatar-list {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  width: 250px;
+}
+
+.reg-form__avatar {
+  margin: 5px;
+  width: 48px;
+  background-color: #e7e7e7;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 6px;
+  -webkit-transition: border-color 0.3s ease-in-out,
+    -webkit-transform 0.3s ease-in-out;
+  transition: border-color 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  -o-transition: transform 0.3s ease-in-out, border-color 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, border-color 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, border-color 0.3s ease-in-out,
+    -webkit-transform 0.3s ease-in-out;
+  padding-top: 2px;
+}
+
+.reg-form__avatar:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(45, 202, 255);
+  border-radius: 6px;
+}
+
+.reg-form__avatar--selected {
+  background-color: white;
+  border-color: rgb(45, 202, 255);
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+.reg-form__avatar--disabled {
+  opacity: 0.5;
+  border-color: transparent;
+  border-style: none;
+  border-width: 0px;
+  border-radius: 0px;
+  -webkit-transition: none;
+  -o-transition: none;
+  transition: none;
+}
+
+.reg-form__avatar--disabled:hover {
+  cursor: initial;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+  border-width: 0px;
+}
+
+.reg-form__avatar--animation {
+  -webkit-animation-name: flash;
+  animation-name: flash;
+  -webkit-animation-duration: 0.8s;
+  animation-duration: 0.8s;
+}
+
+@-webkit-keyframes flash {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  20% {
+    -webkit-transform: scale(1.15);
+    transform: scale(1.15);
+  }
+  40% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  80% {
+    -webkit-transform: scale(1.15);
+    transform: scale(1.15);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes flash {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  20% {
+    -webkit-transform: scale(1.15);
+    transform: scale(1.15);
+  }
+  40% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  80% {
+    -webkit-transform: scale(1.15);
+    transform: scale(1.15);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}

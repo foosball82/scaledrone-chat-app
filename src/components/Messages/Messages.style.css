@@ -1,0 +1,232 @@
+.msg-list {
+  padding: 10px 0px 40px 0px;
+  list-style: none;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.msg-list__msg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 6px 2px 0px 10px;
+}
+
+.msg-list__msg--thisMember {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+
+.history {
+  opacity: 0.5;
+}
+
+.hide {
+  display: none;
+}
+
+/*  */
+.msg-list__member-data {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.msg-list__member-data--thisMember {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+
+/*  */
+.msg-list__avatar {
+  width: 32px;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  margin-top: 20px;
+}
+
+.msg-list__avatar--random {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0px 5px;
+}
+
+.msg-list__info-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  padding-top: 10px;
+}
+
+.msg-list__info-container--thisMember {
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+}
+
+.msg-list__username {
+  display: block;
+  color: gray;
+  font-size: 14px;
+  padding-bottom: 4px;
+}
+
+.msg-list__time-info {
+  width: 20px;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  z-index: 0;
+}
+
+.msg-list__time-info--open {
+  -webkit-filter: none;
+  filter: none;
+}
+
+/*  */
+.msg-list__text-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+  margin-right: 50px;
+  margin-left: 0px;
+  cursor: pointer;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.msg-list__text-container--thisMember {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  margin-right: 0px;
+  margin-left: 50px;
+}
+
+.msg-list__text {
+  padding: 4px;
+  border-radius: 6px;
+  background-color: rgb(71, 71, 71);
+  color: rgb(236, 236, 236);
+  word-break: break-word;
+  line-height: 20px;
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+}
+
+.msg-list__text--light {
+  background-color: rgb(148, 148, 148);
+  color: rgb(255, 255, 255);
+}
+
+.msg-list__text::-moz-selection {
+  background-color: lightgray;
+}
+
+.msg-list__text::selection {
+  background-color: lightgray;
+}
+
+.msg-list__text-container--thisMember .msg-list__text {
+  background-color: rgb(56, 63, 151);
+}
+
+.msg-list__text-container--thisMember .msg-list__text--light {
+  background-color: rgb(92, 98, 177);
+}
+
+.msg-list__timestamp {
+  display: none;
+  font-size: 10px;
+  color: lightgray;
+  margin-right: 0px;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
+  padding: 0px 5px;
+}
+
+.msg-list__timestamp--light {
+  color: rgb(68, 68, 68);
+}
+
+.msg-list__timestamp--show {
+  display: block;
+}
+
+.control-message {
+  color: #777;
+  text-align: center;
+  font-size: 14px;
+}
+.msg-list {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(150, 150, 150) rgb(34, 34, 34);
+}
+
+.msg-list--light {
+  scrollbar-color: rgb(150, 150, 150) rgb(240, 240, 240);
+}
+
+/* Works on Chrome/Edge/Safari */
+.msg-list::-webkit-scrollbar {
+  width: 10px;
+  height: 0px;
+}
+.msg-list::-webkit-scrollbar-track {
+  background: rgb(34, 34, 34);
+}
+.msg-list::-webkit-scrollbar-thumb {
+  background-color: rgb(150, 150, 150);
+  border-radius: 20px;
+  border: 3px solid rgb(34, 34, 34);
+}
+
+.msg-list--light::-webkit-scrollbar-track {
+  background: rgb(240, 240, 240);
+}
+.msg-list--light::-webkit-scrollbar-thumb {
+  background-color: rgb(150, 150, 150);
+  border: 3px solid rgb(240, 240, 240);
+}

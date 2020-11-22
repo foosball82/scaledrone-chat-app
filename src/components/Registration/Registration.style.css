@@ -1,0 +1,67 @@
+.form-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.reg-form {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  height: 500px;
+  width: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #e7e7e7;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.reg-form__txt-input {
+  padding: 5px;
+  font-size: 16px;
+  border: 1px solid rgb(206, 179, 187);
+}
+
+.reg-form__span {
+  color: #222;
+}
+
+.reg-form__span--disabled {
+  color: #888;
+}
+
+.reg-form__room-select {
+  border: 1px solid rgb(206, 179, 187);
+}
+
+.reg-form__random-checkbox {
+  color: #222;
+}
+
+.reg-form__btn {
+  padding: 5px 10px;
+  font-size: 16px;
+  background-color: rgb(76, 175, 109);
+  color: white;
+  border: none;
+}
+
+.reg-form__btn:hover {
+  cursor: pointer;
+  background-color: rgb(27, 117, 57);
+}
