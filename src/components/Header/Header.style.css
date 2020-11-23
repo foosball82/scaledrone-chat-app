@@ -1,16 +1,16 @@
 .chat__header {
   background: rgb(23, 24, 43);
+  background: -o-linear-gradient(
+    left,
+    rgba(23, 24, 43, 1) 0%,
+    rgba(48, 56, 152, 1) 100%
+  );
   background: -webkit-gradient(
     linear,
     left top,
     right top,
     from(rgba(23, 24, 43, 1)),
     to(rgba(48, 56, 152, 1))
-  );
-  background: -o-linear-gradient(
-    left,
-    rgba(23, 24, 43, 1) 0%,
-    rgba(48, 56, 152, 1) 100%
   );
   background: linear-gradient(
     90deg,
@@ -49,4 +49,98 @@
 
 .header__typing {
   font-size: 10px;
+}
+
+/* members-list */
+.onlineMembers-container {
+  background: rgb(50, 50, 50);
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(rgba(50, 50, 50, 1)),
+    color-stop(20%, rgba(42, 42, 42, 1)),
+    color-stop(43%, rgba(34, 34, 34, 1)),
+    color-stop(54%, rgba(34, 34, 34, 1)),
+    color-stop(77%, rgba(42, 42, 42, 1)),
+    to(rgba(50, 50, 50, 1))
+  );
+  background: -o-linear-gradient(
+    top,
+    rgba(50, 50, 50, 1) 0%,
+    rgba(42, 42, 42, 1) 20%,
+    rgba(34, 34, 34, 1) 43%,
+    rgba(34, 34, 34, 1) 54%,
+    rgba(42, 42, 42, 1) 77%,
+    rgba(50, 50, 50, 1) 100%
+  );
+  background: linear-gradient(
+    180deg,
+    rgba(50, 50, 50, 1) 0%,
+    rgba(42, 42, 42, 1) 20%,
+    rgba(34, 34, 34, 1) 43%,
+    rgba(34, 34, 34, 1) 54%,
+    rgba(42, 42, 42, 1) 77%,
+    rgba(50, 50, 50, 1) 100%
+  );
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: rgb(200, 200, 200);
+  font-size: 10px;
+  padding: 5px;
+  padding-left: 10px;
+}
+
+.onlineMembers-container > span {
+  margin-top: 8px;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+}
+
+.onlineMembers {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.onlineMembers__member {
+  margin-left: 10px;
+  margin-bottom: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.onlineMembers__avatar {
+  display: inline-block;
+  height: 17.5px;
+  margin: 0px 2px;
+}
+
+.onlineMembers__color {
+  height: 17.5px;
+  width: 13px;
+  display: inline-block;
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  margin: 0px 2px;
 }

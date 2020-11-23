@@ -64,11 +64,12 @@
 }
 
 .msg-list__avatar--random {
-  height: 30px;
-  width: 30px;
-  border-radius: 50%;
+  height: 35px;
+  width: 26px;
   display: inline-block;
-  margin: 0px 5px;
+  -ms-flex-item-align: end;
+  align-self: flex-end;
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
 }
 
 .msg-list__info-container {
@@ -83,12 +84,15 @@
   -ms-flex-align: start;
   align-items: flex-start;
   padding-top: 10px;
+  margin-left: 5px;
 }
 
 .msg-list__info-container--thisMember {
   -webkit-box-align: end;
   -ms-flex-align: end;
   align-items: flex-end;
+  margin-left: 0px;
+  margin-right: 5px;
 }
 
 .msg-list__username {

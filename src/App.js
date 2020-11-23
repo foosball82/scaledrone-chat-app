@@ -91,18 +91,15 @@ export default function App() {
       room.on("members", (m) => {
         members.online = m;
         setMembers({ ...members });
-        console.log(members);
       });
       room.on("member_join", (member) => {
         members.online.push(member);
         setMembers({ ...members });
-        console.log(members);
       });
       room.on("member_leave", ({ id }) => {
         const index = members.online.findIndex((member) => member.id === id);
         members.online.splice(index, 1);
         setMembers({ ...members });
-        console.log(members);
       });
       room.on("message", (message) => {
         receiveMsg(message);
@@ -158,7 +155,11 @@ export default function App() {
       className={chatTheme === "dark" ? "chat" : "chat chat--light"}
       ref={chatDiv}
     >
-      <Header room={chat.member.room} whoIsTyping={isTyping} />
+      <Header
+        room={chat.member.room}
+        whoIsTyping={isTyping}
+        members={members.online}
+      />
       <Menu
         chatTheme={chatTheme}
         setChatTheme={(theme) => setChatTheme(theme)}
