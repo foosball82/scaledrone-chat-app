@@ -33,6 +33,7 @@ export default function App() {
   const [roomChange, setRoomChange] = useState();
   const [isTyping, setIsTyping] = useState({ users: [] });
   const [initialMemberId, setinitialMemberId] = useState(null);
+  const [members, setMembers] = useState({ online: [] });
 
   const chatDiv = useRef();
   const getRefFromParent = () => {
@@ -49,6 +50,65 @@ export default function App() {
   }, [chat.member]);
 
   useEffect(() => {
+    const droneEvents = () => {
+      drone.on("open", (error) => {
+        if (error) {
+          return console.error(error);
+        }
+        chat.member.id = drone.clientId;
+        if (initialMemberId === null) setinitialMemberId(drone.clientId);
+        if (localStorage.username) {
+          chat.member.username = localStorage.username;
+          chat.member.avatar = localStorage.avatar;
+          chat.member.room = localStorage.room;
+          chat.member.color = localStorage.color;
+        }
+        setChat({ ...chat }, chat.member);
+        roomEvents();
+      });
+
+      drone.on("error", (error) => console.error(error));
+      drone.on("disconnect", () => {
+        console.log(
+          "User has disconnected, Scaledrone will try to reconnect soon"
+        );
+      });
+      drone.on("reconnect", () => {
+        console.log("User has been reconnected");
+      });
+    };
+
+    const roomEvents = () => {
+      const room = drone.subscribe(`observable-${chat.member.room}`);
+      room.on("open", (error) => {
+        if (error) {
+          console.error(error);
+        } else {
+          console.log("Connected to room");
+          setRoomReady(true);
+        }
+      });
+      room.on("members", (m) => {
+        members.online = m;
+        setMembers({ ...members });
+        console.log(members);
+      });
+      room.on("member_join", (member) => {
+        members.online.push(member);
+        setMembers({ ...members });
+        console.log(members);
+      });
+      room.on("member_leave", ({ id }) => {
+        const index = members.online.findIndex((member) => member.id === id);
+        members.online.splice(index, 1);
+        setMembers({ ...members });
+        console.log(members);
+      });
+      room.on("message", (message) => {
+        receiveMsg(message);
+      });
+    };
+
     const receiveMsg = (message) => {
       message.member.clientData.room = chat.member.room;
       if (
@@ -78,68 +138,14 @@ export default function App() {
     };
 
     if (drone && !chat.member.id) {
-      drone.on("open", (error) => {
-        if (error) {
-          return console.error(error);
-        }
-        chat.member.id = drone.clientId;
-        if (initialMemberId === null) setinitialMemberId(drone.clientId);
-        if (localStorage.username) {
-          chat.member.username = localStorage.username;
-          chat.member.avatar = localStorage.avatar;
-          chat.member.room = localStorage.room;
-          chat.member.color = localStorage.color;
-        }
-
-        setChat({ ...chat }, chat.member);
-
-        const room = drone.subscribe(`observable-${chat.member.room}`);
-        room.on("open", (error) => {
-          if (error) {
-            console.error(error);
-          } else {
-            console.log("Connected to room");
-            setRoomReady(true);
-          }
-        });
-        /* room.on("member_join", function (member) {
-          console.log("join", member);
-        });
-        room.on("member_leave", function (member) {
-          console.log("leave", member);
-        }); */
-        room.on("message", (message) => {
-          receiveMsg(message);
-        });
-      });
-
-      drone.on("error", (error) => console.error(error));
-      drone.on("disconnect", () => {
-        console.log(
-          "User has disconnected, Scaledrone will try to reconnect soon"
-        );
-      });
-      drone.on("reconnect", () => {
-        console.log("User has been reconnected");
-      });
+      droneEvents();
     }
 
     if (roomChange) {
-      const room = drone.subscribe(`observable-${chat.member.room}`);
-      room.on("open", (error) => {
-        if (error) {
-          console.error(error);
-        } else {
-          console.log("Connected to room");
-          setRoomReady(true);
-        }
-      });
-      room.on("message", (message) => {
-        receiveMsg(message);
-      });
+      roomEvents();
       setRoomChange(false);
     }
-  }, [chat, drone, roomChange, isTyping, initialMemberId]);
+  }, [chat, drone, roomChange, isTyping, initialMemberId, members]);
 
   return !localStorage.username && !chat.member.username ? (
     <div className="reg-container">
