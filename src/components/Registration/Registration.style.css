@@ -26,7 +26,7 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #e7e7e7;
+  background-color: var(--regFormBg);
   -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
 }
@@ -34,34 +34,34 @@
 .reg-form__txt-input {
   padding: 5px;
   font-size: 16px;
-  border: 1px solid rgb(206, 179, 187);
+  border: 1px solid var(--regFormTxtInputBorder);
 }
 
 .reg-form__span {
-  color: #222;
+  color: var(--regFormSpanColor);
 }
 
 .reg-form__span--disabled {
-  color: #888;
+  color: var(--regFormSpanColorDisabled);
 }
 
 .reg-form__room-select {
-  border: 1px solid rgb(206, 179, 187);
+  border: 1px solid var(--regFormRoomSelectBorder);
 }
 
 .reg-form__random-checkbox {
-  color: #222;
+  color: var(--regFormRandomCheckboxColor);
 }
 
 .reg-form__btn {
   padding: 5px 10px;
   font-size: 16px;
-  background-color: rgb(76, 175, 109);
-  color: white;
+  background-color: var(--regFormButtonBg);
+  color: var(--regFormButtonColor);
   border: none;
 }
 
 .reg-form__btn:hover {
   cursor: pointer;
-  background-color: rgb(27, 117, 57);
+  background-color: var(--regFormButtonHoverBg);
 }

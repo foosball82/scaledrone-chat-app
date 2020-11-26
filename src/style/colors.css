@@ -1,0 +1,75 @@
+:root {
+  /* App.css */
+  --chatBg: rgb(34, 34, 34);
+  --chatBgLight: rgb(240, 240, 240);
+
+  /* Avatars.style.css */
+  --avatarBg: #e7e7e7;
+  --avatarSelectedBg: white;
+  --avatarBorderColor: rgb(45, 202, 255);
+
+  /* Emoji.style.css */
+  --emojiBg: rgb(50, 50, 50);
+  --emojiBgLighter: rgba(50, 50, 50, 1);
+  --emojiBgDarker: rgba(34, 34, 34, 1);
+  --emojiBgMid: rgba(42, 42, 42, 1);
+  --emojiListBg: rgb(44, 44, 44);
+  --emojiScrollbar: rgb(150, 150, 150);
+
+  /* Header.style.css */
+  --headerBg: rgb(23, 24, 43);
+  --headerBgDarker: rgba(23, 24, 43, 1);
+  --headerBgLighter: rgba(48, 56, 152, 1);
+  --headerColor: rgb(216, 216, 216);
+
+  /* members-list */
+  --membersListBg: var(--emojiBg);
+  --membersListBgLighter: var(--emojiBgLighter);
+  --membersListBgDarker: var(--emojiBgDarker);
+  --membersListBgMid: var(--emojiBgMid);
+  --membersListColor: rgb(200, 200, 200);
+
+  /* Input.style.css */
+  --msgFormInputColor: rgb(43, 43, 43);
+  --msgFormInputBg: rgb(245, 245, 245);
+  --msgFormInputSelection: lightgray;
+  --msgFormEmojiBtnBg: rgb(245, 245, 245);
+
+  /* Menu.style.css */
+  --menuIconLineBg: #cdcdcd;
+  --menuIconLineBgDarker: #232323;
+  --menuBg: #e0e0e0;
+  --menuRoomActiveColor: rgb(110, 117, 218);
+  --sliderBg: #ccc;
+  --sliderThemeBg: rgb(46, 46, 46);
+  --sliderBeforeBg: white;
+  --sliderThemeBeforeBg: rgb(110, 117, 218);
+  --sliderCheckedBg: rgb(240, 240, 240);
+
+  /* Messages.style.css */
+  --msgListUsernameColor: gray;
+  --msgListTextBg: rgb(71, 71, 71);
+  --msgListTextColor: rgb(236, 236, 236);
+  --msgListTextBgLight: rgb(148, 148, 148);
+  --msgListTextColorLight: rgb(255, 255, 255);
+  --msgListTextSelection: lightgray;
+  --msgListTextThisMemberBg: rgb(56, 63, 151);
+  --msgListTextThisMemberBgLight: rgb(92, 98, 177);
+  --msgListTimestampColor: lightgray;
+  --msgListTimestampColorLight: rgb(68, 68, 68);
+  --ctrlMsgColor: #777;
+  --msgListScrollbar: rgb(150, 150, 150);
+  --msgListScrollbarBg: rgb(34, 34, 34);
+  --msgListScrollbarBgLight: rgb(240, 240, 240);
+
+  /* Registration.style.css */
+  --regFormBg: #e7e7e7;
+  --regFormTxtInputBorder: rgb(206, 179, 187);
+  --regFormSpanColor: #222;
+  --regFormSpanColorDisabled: #888;
+  --regFormRoomSelectBorder: rgb(206, 179, 187);
+  --regFormRandomCheckboxColor: #222;
+  --regFormButtonBg: rgb(76, 175, 109);
+  --regFormButtonColor: white;
+  --regFormButtonHoverBg: rgb(27, 117, 57);
+}

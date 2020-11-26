@@ -1,25 +1,25 @@
 .chat__header {
-  background: rgb(23, 24, 43);
+  background: var(--headerBg);
   background: -o-linear-gradient(
     left,
-    rgba(23, 24, 43, 1) 0%,
-    rgba(48, 56, 152, 1) 100%
+    var(--headerBgDarker) 0%,
+    var(--headerBgLighter) 100%
   );
   background: -webkit-gradient(
     linear,
     left top,
     right top,
-    from(rgba(23, 24, 43, 1)),
-    to(rgba(48, 56, 152, 1))
+    from(var(--headerBgDarker)),
+    to(var(--headerBgLighter))
   );
   background: linear-gradient(
     90deg,
-    rgba(23, 24, 43, 1) 0%,
-    rgba(48, 56, 152, 1) 100%
+    var(--headerBgDarker) 0%,
+    var(--headerBgLighter) 100%
   );
   width: 100%;
   text-align: center;
-  color: rgb(216, 216, 216);
+  color: var(--headerColor);
   height: 56px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -53,35 +53,35 @@
 
 /* members-list */
 .onlineMembers-container {
-  background: rgb(50, 50, 50);
+  background: var(--membersListBg);
   background: -webkit-gradient(
     linear,
     left top,
     left bottom,
-    from(rgba(50, 50, 50, 1)),
-    color-stop(20%, rgba(42, 42, 42, 1)),
-    color-stop(43%, rgba(34, 34, 34, 1)),
-    color-stop(54%, rgba(34, 34, 34, 1)),
-    color-stop(77%, rgba(42, 42, 42, 1)),
-    to(rgba(50, 50, 50, 1))
+    from(var(--membersListBgLighter)),
+    color-stop(20%, var(--membersListBgMid)),
+    color-stop(43%, var(--membersListBgDarker)),
+    color-stop(54%, var(--membersListBgDarker)),
+    color-stop(77%, var(--membersListBgMid)),
+    to(var(--membersListBgLighter))
   );
   background: -o-linear-gradient(
     top,
-    rgba(50, 50, 50, 1) 0%,
-    rgba(42, 42, 42, 1) 20%,
-    rgba(34, 34, 34, 1) 43%,
-    rgba(34, 34, 34, 1) 54%,
-    rgba(42, 42, 42, 1) 77%,
-    rgba(50, 50, 50, 1) 100%
+    var(--membersListBgLighter) 0%,
+    var(--membersListBgMid) 20%,
+    var(--membersListBgDarker) 43%,
+    var(--membersListBgDarker) 54%,
+    var(--membersListBgMid) 77%,
+    var(--membersListBgLighter) 100%
   );
   background: linear-gradient(
     180deg,
-    rgba(50, 50, 50, 1) 0%,
-    rgba(42, 42, 42, 1) 20%,
-    rgba(34, 34, 34, 1) 43%,
-    rgba(34, 34, 34, 1) 54%,
-    rgba(42, 42, 42, 1) 77%,
-    rgba(50, 50, 50, 1) 100%
+    var(--membersListBgLighter) 0%,
+    var(--membersListBgMid) 20%,
+    var(--membersListBgDarker) 43%,
+    var(--membersListBgDarker) 54%,
+    var(--membersListBgMid) 77%,
+    var(--membersListBgLighter) 100%
   );
   display: -webkit-box;
   display: -ms-flexbox;
@@ -93,7 +93,7 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  color: rgb(200, 200, 200);
+  color: var(--membersListColor);
   font-size: 10px;
   padding: 5px;
   padding-left: 10px;

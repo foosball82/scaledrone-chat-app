@@ -2,6 +2,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+
 /* prettier-ignore */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -84,7 +85,7 @@ button:hover {
   width: 100vw;
   height: calc(100vh);
   margin: 0px auto;
-  background-color: rgb(34, 34, 34);
+  background-color: var(--chatBg);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -99,5 +100,5 @@ button:hover {
 }
 
 .chat--light {
-  background-color: rgb(240, 240, 240);
+  background-color: var(--chatBgLight);
 }

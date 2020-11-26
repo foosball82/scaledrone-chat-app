@@ -12,35 +12,35 @@
   margin-left: -10px;
   margin-bottom: 5px;
   padding: 8px 0px;
-  background: rgb(50, 50, 50);
+  background: var(--emojiBg);
   background: -webkit-gradient(
     linear,
     left top,
     left bottom,
-    from(rgba(50, 50, 50, 1)),
-    color-stop(20%, rgba(42, 42, 42, 1)),
-    color-stop(43%, rgba(34, 34, 34, 1)),
-    color-stop(54%, rgba(34, 34, 34, 1)),
-    color-stop(77%, rgba(42, 42, 42, 1)),
-    to(rgba(50, 50, 50, 1))
+    from(var(--emojiBgLighter)),
+    color-stop(20%, var(--emojiBgMid)),
+    color-stop(43%, var(--emojiBgDarker)),
+    color-stop(54%, var(--emojiBgDarker)),
+    color-stop(77%, var(--emojiBgMid)),
+    to(var(--emojiBgLighter))
   );
   background: -o-linear-gradient(
     top,
-    rgba(50, 50, 50, 1) 0%,
-    rgba(42, 42, 42, 1) 20%,
-    rgba(34, 34, 34, 1) 43%,
-    rgba(34, 34, 34, 1) 54%,
-    rgba(42, 42, 42, 1) 77%,
-    rgba(50, 50, 50, 1) 100%
+    var(--emojiBgLighter) 0%,
+    var(--emojiBgMid) 20%,
+    var(--emojiBgDarker) 43%,
+    var(--emojiBgDarker) 54%,
+    var(--emojiBgMid) 77%,
+    var(--emojiBgLighter) 100%
   );
   background: linear-gradient(
     180deg,
-    rgba(50, 50, 50, 1) 0%,
-    rgba(42, 42, 42, 1) 20%,
-    rgba(34, 34, 34, 1) 43%,
-    rgba(34, 34, 34, 1) 54%,
-    rgba(42, 42, 42, 1) 77%,
-    rgba(50, 50, 50, 1) 100%
+    var(--emojiBgLighter) 0%,
+    var(--emojiBgMid) 20%,
+    var(--emojiBgDarker) 43%,
+    var(--emojiBgDarker) 54%,
+    var(--emojiBgMid) 77%,
+    var(--emojiBgLighter) 100%
   );
 }
 
@@ -143,7 +143,7 @@
   flex-wrap: wrap;
   -ms-flex-line-pack: start;
   align-content: flex-start;
-  background-color: rgb(44, 44, 44);
+  background-color: var(--emojiListBg);
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -171,7 +171,7 @@
 
 .emoji-list {
   scrollbar-width: thin;
-  scrollbar-color: rgb(150, 150, 150) rgb(44, 44, 44);
+  scrollbar-color: var(--emojiScrollbar) var(--emojiListBg);
 }
 
 /* Works on Chrome/Edge/Safari */
@@ -180,10 +180,10 @@
   height: 0px;
 }
 .emoji-list::-webkit-scrollbar-track {
-  background: rgb(44, 44, 44);
+  background: var(--emojiListBg);
 }
 .emoji-list::-webkit-scrollbar-thumb {
-  background-color: rgb(150, 150, 150);
+  background-color: var(--emojiScrollbar);
   border-radius: 20px;
-  border: 3px solid rgb(44, 44, 44);
+  border: 3px solid var(--emojiListBg);
 }

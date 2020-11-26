@@ -97,7 +97,7 @@
 
 .msg-list__username {
   display: block;
-  color: gray;
+  color: var(--msgListUsernameColor);
   font-size: 14px;
   padding-bottom: 4px;
 }
@@ -149,8 +149,8 @@
 .msg-list__text {
   padding: 4px;
   border-radius: 6px;
-  background-color: rgb(71, 71, 71);
-  color: rgb(236, 236, 236);
+  background-color: var(--msgListTextBg);
+  color: var(--msgListTextColor);
   word-break: break-word;
   line-height: 20px;
   -webkit-user-select: text;
@@ -160,30 +160,30 @@
 }
 
 .msg-list__text--light {
-  background-color: rgb(148, 148, 148);
-  color: rgb(255, 255, 255);
+  background-color: var(--msgListTextBgLight);
+  color: var(--msgListTextColorLight);
 }
 
 .msg-list__text::-moz-selection {
-  background-color: lightgray;
+  background-color: var(--msgListTextSelection);
 }
 
 .msg-list__text::selection {
-  background-color: lightgray;
+  background-color: var(--msgListTextSelection);
 }
 
 .msg-list__text-container--thisMember .msg-list__text {
-  background-color: rgb(56, 63, 151);
+  background-color: var(--msgListTextThisMemberBg);
 }
 
 .msg-list__text-container--thisMember .msg-list__text--light {
-  background-color: rgb(92, 98, 177);
+  background-color: var(--msgListTextThisMemberBgLight);
 }
 
 .msg-list__timestamp {
   display: none;
   font-size: 10px;
-  color: lightgray;
+  color: var(--msgListTimestampColor);
   margin-right: 0px;
   -ms-flex-item-align: center;
   -ms-grid-row-align: center;
@@ -192,7 +192,7 @@
 }
 
 .msg-list__timestamp--light {
-  color: rgb(68, 68, 68);
+  color: var(--msgListTimestampColorLight);
 }
 
 .msg-list__timestamp--show {
@@ -200,17 +200,17 @@
 }
 
 .control-message {
-  color: #777;
+  color: var(--ctrlMsgColor);
   text-align: center;
   font-size: 14px;
 }
 .msg-list {
   scrollbar-width: thin;
-  scrollbar-color: rgb(150, 150, 150) rgb(34, 34, 34);
+  scrollbar-color: var(--msgListScrollbar) var(--msgListScrollbarBg);
 }
 
 .msg-list--light {
-  scrollbar-color: rgb(150, 150, 150) rgb(240, 240, 240);
+  scrollbar-color: var(--msgListScrollbar) var(--msgListScrollbarBgLight);
 }
 
 /* Works on Chrome/Edge/Safari */
@@ -219,18 +219,18 @@
   height: 0px;
 }
 .msg-list::-webkit-scrollbar-track {
-  background: rgb(34, 34, 34);
+  background: var(--msgListScrollbarBg);
 }
 .msg-list::-webkit-scrollbar-thumb {
-  background-color: rgb(150, 150, 150);
+  background-color: var(--msgListScrollbar);
   border-radius: 20px;
-  border: 3px solid rgb(34, 34, 34);
+  border: 3px solid var(--msgListScrollbarBg);
 }
 
 .msg-list--light::-webkit-scrollbar-track {
-  background: rgb(240, 240, 240);
+  background: var(--msgListScrollbarBgLight);
 }
 .msg-list--light::-webkit-scrollbar-thumb {
-  background-color: rgb(150, 150, 150);
-  border: 3px solid rgb(240, 240, 240);
+  background-color: var(--msgListScrollbar);
+  border: 3px solid var(--msgListScrollbarBgLight);
 }
