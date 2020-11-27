@@ -27,9 +27,15 @@ export default function App() {
   const [chat, setChat] = useState(initialChatState);
   const [roomReady, setRoomReady] = useState(false);
   const [drone, setDrone] = useState(null);
-  const [chatTheme, setChatTheme] = useState("dark");
-  const [saveChat, setSaveChat] = useState(true);
-  const [showHistory, setShowHistory] = useState(true);
+  const [chatTheme, setChatTheme] = useState(
+    localStorage.theme ? localStorage.theme : "dark"
+  );
+  const [saveChat, setSaveChat] = useState(
+    localStorage.saveChat ? JSON.parse(localStorage.saveChat) : true
+  );
+  const [showHistory, setShowHistory] = useState(
+    localStorage.showHistory ? JSON.parse(localStorage.showHistory) : true
+  );
   const [roomChange, setRoomChange] = useState();
   const [isTyping, setIsTyping] = useState({ users: [] });
   const [initialMemberId, setinitialMemberId] = useState(null);

@@ -1,24 +1,30 @@
 export const changeTheme = (e, setChatTheme) => {
   if (e.target.checked) {
     setChatTheme("light");
+    localStorage.setItem("theme", "light");
   } else {
     setChatTheme("dark");
+    localStorage.setItem("theme", "dark");
   }
 };
 
 export const handleSaveChat = (e, setSaveChat) => {
   if (e.target.checked) {
     setSaveChat(true);
+    localStorage.setItem("saveChat", true);
   } else {
     setSaveChat(false);
+    localStorage.setItem("saveChat", false);
   }
 };
 
 export const handleShowHistory = (e, setShowHistory) => {
   if (e.target.checked) {
     setShowHistory(true);
+    localStorage.setItem("showHistory", true);
   } else {
     setShowHistory(false);
+    localStorage.setItem("showHistory", false);
   }
 };
 
