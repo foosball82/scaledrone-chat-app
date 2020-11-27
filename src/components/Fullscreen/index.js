@@ -6,10 +6,6 @@ export default function Fullscreen({ getElement }) {
 
   const toggleFullScreen = () => {
     let doc = window.document;
-
-    /*kroz propse sam ovoj komponenti proslijedio 
-      funkciju koja vraća ref iz App komponente,
-      to sam skužio nakon što sam poslao mail..*/
     let chatDiv = getElement();
 
     let requestFullScreen =
