@@ -8,8 +8,8 @@ export default function Input({ sendMessage, thisMember }) {
     "You need to type something first..."
   ];
   const emojiClassName = [
-    "emoji-list emoji-list--hide",
-    "emoji-list emoji-list--show"
+    "emoji-container emoji-container--hide",
+    "emoji-container emoji-container--show"
   ];
   const initialInput = {
     text: "",
@@ -85,7 +85,7 @@ export default function Input({ sendMessage, thisMember }) {
 
   return (
     <div className="chat__input">
-      <Emoji onMouseDown={insertEmoji} className={emojiClass} />
+      <Emoji insertEmoji={insertEmoji} className={emojiClass} />
       <form className="msg-form" onSubmit={publishInput}>
         <button
           className="msg-form__emoji-btn"

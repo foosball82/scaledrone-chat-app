@@ -15,7 +15,7 @@ const emojiTabs = [
   "&#x1F947;"
 ];
 
-export default function Emoji({ onMouseDown, className }) {
+export default function Emoji({ insertEmoji, className }) {
   const [currentEmoji, setCurrentEmoji] = useState(emojiTabs[7]);
 
   let tabRange = [
@@ -27,7 +27,8 @@ export default function Emoji({ onMouseDown, className }) {
     tabRange[1] = undefined;
   }
 
-  function changeTab(emoji) {
+  function changeTab(e, emoji) {
+    e.preventDefault();
     setCurrentEmoji(emoji);
   }
 
@@ -36,8 +37,8 @@ export default function Emoji({ onMouseDown, className }) {
   }
 
   return (
-    <ul className={className} onMouseDown={(e) => e.preventDefault()}>
-      <li key="emoji-tab" className="emoji-tab">
+    <div className={className}>
+      <div className="emoji-tab" onMouseDown={(e) => e.preventDefault()}>
         {emojiTabs.map((emoji, index) => (
           <span
             key={index}
@@ -48,25 +49,27 @@ export default function Emoji({ onMouseDown, className }) {
             }
             role="img"
             aria-label={emoji}
-            onMouseDown={() => changeTab(emoji)}
+            onMouseDown={(e) => changeTab(e, emoji)}
             dangerouslySetInnerHTML={createMarkup(emoji)}
           ></span>
         ))}
-      </li>
-      {emojis.slice(tabRange[0], tabRange[1]).map((emoji) => (
-        <li
-          className="emoji-list__item"
-          key={emoji}
-          onMouseDown={(e) => e.preventDefault()}
-        >
-          <span
-            role="img"
-            aria-label={emoji}
-            onMouseDown={onMouseDown}
-            dangerouslySetInnerHTML={createMarkup(emoji)}
-          ></span>
-        </li>
-      ))}
-    </ul>
+      </div>
+      <ul className="emoji-list" onMouseDown={(e) => e.preventDefault()}>
+        {emojis.slice(tabRange[0], tabRange[1]).map((emoji) => (
+          <li
+            className="emoji-list__item"
+            key={emoji}
+            onMouseDown={(e) => e.preventDefault()}
+          >
+            <span
+              role="img"
+              aria-label={emoji}
+              onMouseDown={insertEmoji}
+              dangerouslySetInnerHTML={createMarkup(emoji)}
+            ></span>
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 }
