@@ -69,6 +69,8 @@ function Registration({ chat, setChat }) {
           className="reg-form__txt-input"
           type="text"
           placeholder="Enter name..."
+          pattern="^(?!\s*$).+"
+          title="Enter at least one word character."
           maxLength="15"
           required
           onChange={getUsername}
