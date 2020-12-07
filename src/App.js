@@ -15,13 +15,13 @@ export default function App() {
           username: localStorage.username,
           avatar: localStorage.avatar,
           room: localStorage.room,
-          color: localStorage.color !== "undefined" ? localStorage.color : ""
+          color: localStorage.color !== "undefined" ? localStorage.color : "",
         },
-        messages: JSON.parse(localStorage.messages)
+        messages: JSON.parse(localStorage.messages),
       }
     : {
         member: { username: "", avatar: "", room: "", color: "" },
-        messages: []
+        messages: [],
       };
 
   const [chat, setChat] = useState(initialChatState);
@@ -49,7 +49,7 @@ export default function App() {
   useEffect(() => {
     if (chat.member.username !== "" || localStorage.username) {
       const drone = new window.Scaledrone("Gng4m7K07hNftBNe", {
-        data: chat.member
+        data: chat.member,
       });
       setDrone(drone);
     }
